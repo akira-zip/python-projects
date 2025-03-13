@@ -22,7 +22,7 @@ def Main():
   for i in range(0, 2):
     Data.append(float(input('Digite o ' + str(i + 1) + '° número \n')))
 
-  Data.append(int(input('Escolha uma operação: Somar(1), Subtrair(2), Multiplicar(3), Dividir(4), Exponenciação(5), Divisão inteira(6), Módulo(7) \n')))
+  Data.append(int(input('Digite os valores para as respectivas operações:\n [1] - Somar \n [2] - Subtrair \n [3] - Multiplicar \n [4] - Dividir \n [5] - Exponenciação \n [6] - Divisão inteira \n [7] - Módulo \n')))
 
   if(Data[2] == 4 or Data[2] == 6 or Data[2] == 7):
     if(Data[0] == 0 or Data[1] == 0):

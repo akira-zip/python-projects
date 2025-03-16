@@ -1,40 +1,45 @@
-def Operacoes(Opcao, Number1, Number2):
-  match Opcao:
+def operacoes(opcao, n1, n2):
+  match opcao:
     case 1:
-      return(Number1 + Number2)
+      return(n1 + n2)
     case 2:
-      return(Number1 - Number2)
+      return(n1 - n2)
     case 3:
-      return(Number1 * Number2)
+      return(n1 * n2)
     case 4:
-      return(Number1 / Number2)
+      return(n1 / n2)
     case 5:
-      return(Number1 ** Number2)
+      return(n1 ** n2)
     case 6:
-      return(Number1 // Number2)
+      return(n1 // n2)
     case 7:
-      return(Number1 % Number2)
+      return(n1 % n2)
     
-def Main():
-  Restart = 0
-  Data = []
+def main():
+  restart = 0
+  data = []
 
   for i in range(0, 2):
-    Data.append(float(input('Digite o ' + str(i + 1) + '° número \n')))
+    data.append(float(input('Digite o ' + str(i + 1) + '° número \n')))
 
-  Data.append(int(input('Digite os valores para as respectivas operações:\n [1] - Somar \n [2] - Subtrair \n [3] - Multiplicar \n [4] - Dividir \n [5] - Exponenciação \n [6] - Divisão inteira \n [7] - Módulo \n')))
+  data.append(int(input('Digite os valores para as respectivas operações: \n[1] - Somar \n[2] - Subtrair \n[3] - Multiplicar \n[4] - Dividir \n[5] - Exponenciação \n[6] - Divisão inteira \n[7] - Módulo \nSelec: ')))
 
-  if(Data[2] == 4 or Data[2] == 6 or Data[2] == 7):
-    if(Data[0] == 0 or Data[1] == 0):
+  if(data[2] == 4 or data[2] == 6 or data[2] == 7):
+    if(data[0] == 0 or data[1] == 0):
       print('Não é possível dividir por zero! Tente novamente')
-      Main()
+      main()
 
-  print(Operacoes(Data[2], Data[0], Data[1]))
-  Restart = int(input('Escolha se deseja continuar: Sim(1), Não(2) \n'))
+  print('Res:', operacoes(data[2], data[0], data[1]))
 
-  if(Restart == 1):
-    Main()
+  print('\n--------------------------------\n')
+
+  restart = int(input('Escolha se deseja continuar: \n[1] - Sim \n[2] - Não \nSelec: '))
+
+  if(restart == 1):
+    print('\n--------------------------------\n')
+    main()
   else:
+    print('\n--------------------------------\n')
     print('Até a próxima!')
 
-Main()
+main()
